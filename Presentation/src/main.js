@@ -15,6 +15,6 @@ Reveal.initialize({
   center: false,
   controls: true,
   progress: true,
-  slideNumber: false,
+  slideNumber: 'c/t',
   plugins: [Notes],
 })
