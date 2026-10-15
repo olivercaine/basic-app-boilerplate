@@ -1,0 +1,248 @@
+:root {
+  color-scheme: light;
+}
+
+body,
+.reveal-viewport,
+.reveal,
+.reveal .slides,
+.reveal .slides section {
+  background: #f4efe6;
+  color: #1c1915;
+}
+
+.reveal {
+  font-family: Outfit, "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.reveal h1,
+.reveal h3,
+.reveal .stat,
+.reveal .closer {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-transform: none;
+  color: #1c1915;
+}
+
+.reveal h1 {
+  font-size: 58px;
+  line-height: 1.05;
+  margin: 0 0 0.35em;
+}
+
+.reveal h3 {
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0.15rem 0 0.45rem;
+}
+
+.reveal p {
+  margin: 0 0 0.7em;
+  line-height: 1.35;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  height: 100%;
+  padding: 56px 72px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .center-slide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.reveal .center-slide h1 {
+  font-size: 84px;
+  margin-bottom: 0.25em;
+}
+
+.reveal .lede {
+  color: #6f675c;
+  font-size: 28px;
+  line-height: 1.35;
+  margin-bottom: 0.8em;
+}
+
+.reveal .center-slide .lede {
+  margin-bottom: 2.2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6f675c;
+}
+
+.eyebrow.kicker {
+  margin-top: 0.4rem;
+}
+
+.eyebrow.label {
+  width: 5.5rem;
+  flex: none;
+  margin: 0;
+}
+
+.formula {
+  margin: 0 0 1.4rem;
+  font-size: 26px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  height: 100%;
+  align-items: center;
+}
+
+.split.top {
+  align-items: start;
+  padding-top: 0.4rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.stack.roomy {
+  margin-top: 1.6rem;
+  gap: 1.35rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.4rem;
+  align-items: baseline;
+  border-top: 1px solid rgb(28 25 21 / 12%);
+  padding-top: 0.95rem;
+}
+
+.row p:last-child {
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 1.6rem;
+}
+
+.cards.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards.three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  background: #fbf8f2;
+  border: 1px solid rgb(28 25 21 / 10%);
+  padding: 1.15rem 1.25rem 1.25rem;
+}
+
+.card p:last-child {
+  margin: 0;
+  color: #3f3a33;
+}
+
+.stat {
+  font-size: 52px;
+  line-height: 1;
+  margin: 0.35rem 0 0.7rem;
+}
+
+.shot {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgb(28 25 21 / 12%);
+}
+
+.shot.tall {
+  max-height: 500px;
+  object-position: center 30%;
+}
+
+.crop-frame {
+  height: 460px;
+  overflow: hidden;
+  border: 1px solid rgb(28 25 21 / 12%);
+}
+
+.crop-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+  transform: scale(1.42);
+  border: 0;
+}
+
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.3rem;
+  font-size: 26px;
+}
+
+.reveal th {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6f675c;
+  font-weight: 600;
+}
+
+.reveal th,
+.reveal td {
+  padding: 0.62rem 0;
+  border-bottom: 1px solid rgb(28 25 21 / 12%);
+}
+
+.reveal td:last-child,
+.reveal th:last-child {
+  text-align: right;
+}
+
+.closer {
+  font-size: 40px;
+  margin: 0.2rem 0;
+}
+
+.closer.big {
+  font-size: 84px;
+  margin-top: 1.4rem;
+}
+
+.reveal .progress {
+  height: 4px;
+  color: #1c1915;
+}
+
+.reveal .controls {
+  color: #6f675c;
+}

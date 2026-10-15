@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Huddle AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div class="center-slide">
+            <h1>Huddle AI</h1>
+            <p class="lede">Running models on our own machines.</p>
+            <p class="eyebrow kicker">This week</p>
+          </div>
+          <aside class="notes">
+            Open with the week, not the hardware. The point of the huddle is what I have been doing with AI: reading about local models, and building a Linux PC to try them.
+          </aside>
+        </section>
+
+        <section>
+          <div class="split">
+            <div>
+              <h1>This week</h1>
+              <p class="lede">I have been reading about running large language models on machines we control.</p>
+            </div>
+            <div class="stack">
+              <div class="row">
+                <p class="eyebrow">Reading</p>
+                <p>How a model actually gets onto a machine, and what makes it fast or slow.</p>
+              </div>
+              <div class="row">
+                <p class="eyebrow">Building</p>
+                <p>A Linux PC put together for models and the tools around them.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>Why bother</h1>
+          <div class="cards three">
+            <div class="card">
+              <p class="eyebrow">01</p>
+              <h3>Experiment</h3>
+              <p>Try tools, formats, and models without waiting on a vendor roadmap.</p>
+            </div>
+            <div class="card">
+              <p class="eyebrow">02</p>
+              <h3>Privacy</h3>
+              <p>The prompt, the files, and the answers can stay on hardware we own.</p>
+            </div>
+            <div class="card">
+              <p class="eyebrow">03</p>
+              <h3>Cost</h3>
+              <p>A machine has a price. A hosted API keeps charging for every token.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>What the machine has to have</h1>
+          <div class="stack roomy">
+            <div class="row">
+              <p class="eyebrow label">VRAM</p>
+              <p>Enough to hold the whole model. If the weights do not fit, it does not run.</p>
+            </div>
+            <div class="row">
+              <p class="eyebrow label">RAM</p>
+              <p>Memory bandwidth is what turns into tokens per second.</p>
+            </div>
+            <div class="row">
+              <p class="eyebrow label">Disk</p>
+              <p>A fast drive, because loading the model is its own wait.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            VRAM is memory on the GPU, not the disk. The disk is the third point: getting the weights off storage and into memory.
+          </aside>
+        </section>
+
+        <section>
+          <div class="split">
+            <div>
+              <h1>LM Studio</h1>
+              <p class="lede">One app. Windows, Mac, and Linux.</p>
+              <p>Download it, pick a model, and talk to it.</p>
+            </div>
+            <div class="stack">
+              <div class="card">
+                <p class="eyebrow">GGUF</p>
+                <p>The portable format. This is the one for the Linux PC.</p>
+              </div>
+              <div class="card">
+                <p class="eyebrow">MLX</p>
+                <p>Apple's format. This is the one that suits a Mac.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>What you switch on</h1>
+          <div class="cards two">
+            <div class="card">
+              <p class="eyebrow">Tool use</p>
+              <h3>Let it act</h3>
+              <p>Search the web, run code, read a file, call an API, or use MCP servers.</p>
+            </div>
+            <div class="card">
+              <p class="eyebrow">Reasoning</p>
+              <h3>Let it think</h3>
+              <p>Harder problems, maths, and work that takes more than one step.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>How big is the file</h1>
+          <p class="formula">Weights in GB ≈ parameters, in billions × bytes per weight.</p>
+          <div class="cards two">
+            <div class="card">
+              <p class="eyebrow">FP16</p>
+              <p class="stat">2 bytes</p>
+              <p>A 70 billion parameter model is about 140 GB.</p>
+            </div>
+            <div class="card">
+              <p class="eyebrow">4-bit</p>
+              <p class="stat">0.5 bytes</p>
+              <p>The same model is about 35 GB. Lower resolution, much more likely to fit.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            Quantization is the resolution of the weights. The formula is the one in the notes. The 70B example is just the formula applied, so the room can feel the difference.
+          </aside>
+        </section>
+
+        <section>
+          <div class="split">
+            <div>
+              <h1>Will it fit?</h1>
+              <p class="lede">Before downloading a model, check the memory maths.</p>
+              <p>The AI Bridge does that in the open: weights, context, and what the machine keeps for itself.</p>
+            </div>
+            <img src="./TheAiBridge.png" class="shot" alt="The AI Bridge, a calculator for whether a model fits on a Mac" />
+          </div>
+        </section>
+
+        <section>
+          <h1>Then you load it</h1>
+          <div class="cards two">
+            <div class="card">
+              <p class="eyebrow">In LM Studio</p>
+              <h3>A chat on the desk</h3>
+              <p>Load the model and show a normal conversation, running locally.</p>
+            </div>
+            <div class="card">
+              <p class="eyebrow">In Claude</p>
+              <h3>A local override</h3>
+              <p>Point the config at the machine in the room instead of the hosted API.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            Live demo. First the LM Studio chat. Then the Claude config that overrides the remote endpoint with the local one.
+          </aside>
+        </section>
+
+        <section>
+          <h1>Other ways to build it</h1>
+          <div class="cards two">
+            <div class="card">
+              <p class="eyebrow">Buy</p>
+              <h3>NVIDIA DGX Spark</h3>
+              <p>A small NVIDIA machine aimed at this job.</p>
+            </div>
+            <div class="card">
+              <p class="eyebrow">Build</p>
+              <h3>An AI server rack</h3>
+              <p>The same idea as the desk PC, taken out of the office and into a rack.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="split">
+            <div>
+              <h1>A stack of Mac Studios</h1>
+              <p class="lede">One machine is a computer.</p>
+              <p>A stack is a bigger pool of memory, still on the desk.</p>
+            </div>
+            <img src="./clustering.png" class="shot tall" alt="Five silver Mac Studios stacked on a desk beside a laptop" />
+          </div>
+        </section>
+
+        <section>
+          <div class="split">
+            <div>
+              <h1>Tie them together</h1>
+              <p class="lede">The cables are the point.</p>
+              <p>RDMA lets one Studio read another's memory directly, instead of copying every token across a normal network.</p>
+            </div>
+            <div class="crop-frame">
+              <img src="./clustering2.png" alt="Thunderbolt cables linking the ports on a stack of Mac Studios" />
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>Tokens per second</h1>
+          <p class="lede">Same kind of comparison: how many tokens come back each second.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Where it runs</th>
+                <th>Tokens / sec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anthropic / ChatGPT</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>RTX 5090</td>
+                <td>50–70</td>
+              </tr>
+              <tr>
+                <td>Top-spec Mac Studio</td>
+                <td>40–70</td>
+              </tr>
+              <tr>
+                <td>NVIDIA DGX Spark</td>
+                <td>50–70</td>
+              </tr>
+              <tr>
+                <td>Mac Studio cluster</td>
+                <td>Shared over RDMA</td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="notes">
+            These are the figures from this week's notes, for the same model and quantization. The cluster is not given a single number. The point of the cluster is RDMA, not a faster single box.
+          </aside>
+        </section>
+
+        <section>
+          <div class="split top">
+            <div>
+              <h1>What I want to try next</h1>
+              <div class="card">
+                <p class="eyebrow">n8n</p>
+                <h3>Whole workflows</h3>
+                <p>Not one chat. A run of steps that can call the model and then do the work.</p>
+              </div>
+            </div>
+            <div>
+              <p class="eyebrow">LiteLLM</p>
+              <h3>Send the hard calls out</h3>
+              <img src="./LiteLLM.png" class="shot" alt="LiteLLM Auto Router sending a request to a simple, medium, complex, or reasoning model" />
+            </div>
+          </div>
+          <aside class="notes">
+            The diagram is LiteLLM's auto router. A request comes in, a classifier picks a tier, and the answer can come from a small local model or a frontier model somewhere else.
+          </aside>
+        </section>
+
+        <section>
+          <div class="center-slide">
+            <p class="eyebrow">One final thing</p>
+            <p class="closer">There are 24 hours in a day.</p>
+            <p class="closer big">We can.</p>
+          </div>
+          <aside class="notes">
+            The notes stop on "We can." Finish the sentence in the room.
+          </aside>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

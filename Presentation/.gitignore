@@ -1,5 +1,4 @@
 node_modules
 .slidev
-dist
 huddle-ai.html
 *.local
