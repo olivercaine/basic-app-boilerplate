@@ -35,11 +35,17 @@ I've also built my own specialised PC running linux to experiment with models an
    2. Claude
       1. Config - local override
 4. Alternative options
-   1. Mac Studio <photo>
-   2. Mac Studio clustered <photo>
-   3. NVIDIA DGX Spark
+   1. NVIDIA DGX Spark
+   2. Mac Studio <photo>
+   3. Mac Studio clustered <photo>
+   4. AI Server Rack Build
 5. Token speeds compared
-   1. <chart>
+   1. Anthropic/ChatGPT etc = 100
+   2. RTX 5090 = 50–70
+   3. Top spec Mac Studio = 40–70
+   4. Mac Studio = cluster
+      1. RDMA (Remote Direct Memory Access) 
+   5. NVIDIA DGX Spark = 50–70
 6. Things I'm going to be trying next
    1. n8n - full workflows
    2. LiteLLM - offloading to remote AI
