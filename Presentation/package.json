@@ -11,7 +11,7 @@
     "export": "node scripts/run.mjs ./node_modules/@slidev/cli/bin/slidev.mjs export"
   },
   "dependencies": {
-    "@slidev/cli": "^52.8.0",
+    "@slidev/cli": "^53.0.0",
     "@slidev/theme-default": "^0.25.0"
   },
   "devDependencies": {
