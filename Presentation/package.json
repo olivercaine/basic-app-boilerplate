@@ -1,0 +1,20 @@
+{
+  "name": "huddle-ai",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/run.mjs ./node_modules/@slidev/cli/bin/slidev.mjs --open false",
+    "build": "node scripts/run.mjs ./node_modules/@slidev/cli/bin/slidev.mjs build --base ./ --router-mode hash && node scripts/inline-images.mjs",
+    "export": "node scripts/run.mjs ./node_modules/@slidev/cli/bin/slidev.mjs export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.8.0",
+    "@slidev/theme-default": "^0.25.0"
+  },
+  "devDependencies": {
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}

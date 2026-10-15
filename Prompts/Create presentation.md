@@ -1,5 +1,5 @@
-Generate a presentation based on the files in the Presentation folder. Use one of the following frameworks: 
+Generate a presentation based on the files in the Presentation folder. 
 
-1. Reveal.js
-2. Slidev
-3. Marp
+Create it using the Reveal.js framework.
+
+i don't want to have to run the server to present the presentation. ideally i would build it beforehand and just open the html file.
