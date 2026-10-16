@@ -73,6 +73,10 @@ body,
   text-align: left;
 }
 
+.reveal .slides section.photo {
+  padding: 40px 76px 48px;
+}
+
 .reveal .slides section.present {
   display: flex;
   flex-direction: column;
@@ -249,6 +253,17 @@ body,
 .shot.tall {
   max-height: 500px;
   object-position: center 30%;
+}
+
+.reveal img.shot.product {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
+  margin: 0.5rem auto 0;
+  object-fit: contain;
+  object-position: center;
 }
 
 .crop-frame {
