@@ -1,7 +1,4 @@
-import React from 'react';
-import { FaHome, FaMapMarkerAlt, FaTools } from 'react-icons/fa';
-
-const Header = () => {
+const AirbnbHeader = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 lg:px-8 flex items-center h-16 justify-between">
@@ -16,7 +13,7 @@ const Header = () => {
             <a
               key={tab}
               href="#"
-              className="relative text-gray-700 hover:text-airbnbRed font-medium py-2 px-3"
+              className="relative text-airbnbDarkText hover:text-airbnbRed font-medium py-2 px-3"
             >
               {tab}
               {/* Active underline */}
@@ -29,9 +26,9 @@ const Header = () => {
 
         {/* Right - Actions */}
         <div className="flex items-center space-x-4">
-          <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">Become a Host</a>
+          <a href="#" className="text-airbnbSecondaryText hover:text-airbnbDarkText font-medium">Become a Host</a>
           {/* Language/Currency Selector placeholder */}
-          <button className="text-gray-600 hover:text-gray-800 font-medium px-2 py-1 rounded-full border border-transparent hover:border-gray-200">
+          <button className="text-airbnbSecondaryText hover:text-airbnbDarkText font-medium px-2 py-1 rounded-full border border-transparent hover:border-airbnbBorder">
             EN &nbsp;|&nbsp; AUD
           </button>
           {/* User Menu Placeholder */}
@@ -46,4 +43,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AirbnbHeader;
