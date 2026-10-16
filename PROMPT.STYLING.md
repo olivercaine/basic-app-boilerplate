@@ -1,4 +1,4 @@
-retheme it to cyberpunk using the following colours:
+change the colours of the app to cyberpunk using the following:
 
 Design role	Color	Hex
 Main background	● Midnight Void	#05051A
