@@ -7,6 +7,8 @@
   --quiet: #8d847a;
   --line: rgb(243 238 230 / 12%);
   --ember: #e7a15a;
+  --font-display: Oswald, "Arial Narrow", sans-serif;
+  --font-text: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body,
@@ -25,18 +27,18 @@ body,
 }
 
 .reveal {
-  font-family: Outfit, "Avenir Next", "Segoe UI", sans-serif;
+  font-family: var(--font-text);
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .reveal h1,
 .reveal h3,
 .reveal .stat,
 .reveal .closer {
-  font-family: Fraunces, Georgia, serif;
+  font-family: var(--font-display);
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.02em;
   text-transform: none;
   color: var(--paper);
 }
@@ -50,7 +52,7 @@ body,
 .reveal h3 {
   font-size: 32px;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   margin: 0.1rem 0 0.4rem;
   color: var(--paper);
 }
@@ -96,6 +98,18 @@ body,
   margin: 0.15em 0 0.2em;
 }
 
+.reveal a.slide-link {
+  color: var(--ember);
+  font-size: 22px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(231 161 90 / 50%);
+}
+
+.reveal .split > a {
+  display: block;
+  min-width: 0;
+}
+
 .reveal .lede {
   color: var(--muted);
   font-size: 28px;
@@ -104,9 +118,7 @@ body,
 }
 
 .reveal .lede.serif {
-  font-family: Fraunces, Georgia, serif;
-  font-style: italic;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 34px;
   color: var(--paper);
   margin-bottom: 0;
@@ -128,7 +140,7 @@ body,
 .eyebrow {
   margin: 0 0 0.45rem;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ember);
@@ -266,7 +278,7 @@ body,
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ember);
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .reveal th,
@@ -280,7 +292,7 @@ body,
 }
 
 .reveal td:first-child {
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .reveal td:last-child,
@@ -290,14 +302,12 @@ body,
 }
 
 .reveal td:last-child {
-  font-family: Fraunces, Georgia, serif;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--ember);
 }
 
 .closer {
   font-size: 36px;
-  font-style: italic;
   margin: 0.35rem 0 0;
   color: var(--muted);
 }
@@ -329,9 +339,9 @@ body,
   bottom: 16px;
   background: transparent;
   color: var(--quiet);
-  font-family: Outfit, "Avenir Next", sans-serif;
+  font-family: var(--font-text);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.16em;
 }
 

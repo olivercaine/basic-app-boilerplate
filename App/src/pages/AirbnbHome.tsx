@@ -274,7 +274,7 @@ export default function AirbnbHome() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">Airbnb</h3>
+            <h3 className="font-semibold mb-2">AirStay</h3>
             <ul className="space-y-1 text-airbnbSecondaryText">
               <li><a href="#" className="hover:underline">About us</a></li>
               <li><a href="#" className="hover:underline">Careers</a></li>
@@ -288,7 +288,7 @@ export default function AirbnbHome() {
             </ul>
           </div>
         </div>
-        <p className="text-center text-airbnbSecondaryText mt-6">© 2026 Airbnb, Inc.</p>
+        <p className="text-center text-airbnbSecondaryText mt-6">© 2026 AirStay</p>
       </footer>
     </div>
   )

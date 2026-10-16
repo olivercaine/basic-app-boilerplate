@@ -4,7 +4,7 @@ const AirbnbHeader = () => {
       <div className="max-w-screen-xl mx-auto px-4 lg:px-8 flex items-center h-16 justify-between">
         {/* Left - Logo */}
         <div className="flex items-center space-x-2">
-          <a href="#" className="text-airbnbRed font-bold text-lg">airbnb</a>
+          <a href="#" className="text-airbnbRed font-bold text-lg">AirStay</a>
         </div>
 
         {/* Center - Navigation Tabs */}
