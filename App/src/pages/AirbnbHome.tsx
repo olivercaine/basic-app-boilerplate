@@ -22,7 +22,7 @@ const listings = [
     price: "250 AUD/night",
     rating: 4.92,
     guests: 4,
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/apartment-1.jpg"
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const listings = [
     price: "450 AUD/night",
     rating: 4.87,
     guests: 6,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/house-1.jpg"
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const listings = [
     price: "180 AUD/night",
     rating: 4.75,
     guests: 2,
-    image: "https://images.unsplash.com/photo-1602391810010-a4d5b0f4c0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/cabin.jpg"
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const listings = [
     price: "320 AUD/night",
     rating: 4.95,
     guests: 3,
-    image: "https://images.unsplash.com/photo-1616486899687-ea1c99b1f479?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/apartment-2.jpg"
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const listings = [
     price: "380 AUD/night",
     rating: 4.90,
     guests: 5,
-    image: "https://images.unsplash.com/photo-1611892450680-a9a11e70c5b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/beach-house.jpg"
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const listings = [
     price: "420 AUD/night",
     rating: 4.98,
     guests: 4,
-    image: "https://images.unsplash.com/photo-1534528741773-6ca0a0c36b4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/house-3.jpg"
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const listings = [
     price: "150 AUD/night",
     rating: 4.68,
     guests: 2,
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/house-2.jpg"
   },
   {
     id: 8,
@@ -85,17 +85,53 @@ const listings = [
     price: "190 AUD/night",
     rating: 4.72,
     guests: 2,
-    image: "https://images.unsplash.com/photo-1537623130526-7d6c49f7b7e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    image: "/stays/cottage.jpg"
+  },
+  {
+    id: 9,
+    title: "Harbour Apartment",
+    location: "Sydney, Australia",
+    price: "360 AUD/night",
+    rating: 4.91,
+    guests: 2,
+    image: "/stays/apartment-3.jpg"
+  },
+  {
+    id: 10,
+    title: "Terrace House in Surry Hills",
+    location: "Sydney, Australia",
+    price: "290 AUD/night",
+    rating: 4.84,
+    guests: 4,
+    image: "/stays/house-5.jpg"
+  },
+  {
+    id: 11,
+    title: "Light-filled Bondi Apartment",
+    location: "Sydney, Australia",
+    price: "340 AUD/night",
+    rating: 4.88,
+    guests: 3,
+    image: "/stays/apartment-4.jpg"
+  },
+  {
+    id: 12,
+    title: "Modern House above the Harbour",
+    location: "Sydney, Australia",
+    price: "510 AUD/night",
+    rating: 4.96,
+    guests: 6,
+    image: "/stays/house-4.jpg"
   },
 ];
 
 const inspirationDestinations = [
-  { id: 1, name: 'Sydney', description: 'Homes in Sydney' },
-  { id: 2, name: 'Melbourne', description: 'Homes in Melbourne' },
-  { id: 3, name: 'Brisbane', description: 'Homes in Brisbane' },
-  { id: 4, name: 'Gold Coast', description: 'Homes in Gold Coast' },
-  { id: 5, name: 'Perth', description: 'Homes in Perth' },
-  { id: 6, name: 'Adelaide', description: 'Homes in Adelaide' },
+  { id: 1, name: 'Sydney', description: 'Homes in Sydney', image: '/stays/house-4.jpg' },
+  { id: 2, name: 'Melbourne', description: 'Homes in Melbourne', image: '/stays/house-3.jpg' },
+  { id: 3, name: 'Brisbane', description: 'Homes in Brisbane', image: '/stays/apartment-4.jpg' },
+  { id: 4, name: 'Gold Coast', description: 'Homes in Gold Coast', image: '/stays/villa.jpg' },
+  { id: 5, name: 'Perth', description: 'Homes in Perth', image: '/stays/beach-house.jpg' },
+  { id: 6, name: 'Adelaide', description: 'Homes in Adelaide', image: '/stays/adelaide.jpg' },
 ];
 
 export default function AirbnbHome() {
@@ -240,9 +276,8 @@ export default function AirbnbHome() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {inspirationDestinations.map(dest => (
               <div key={dest.id} className="relative rounded-xl overflow-hidden group cursor-pointer">
-                {/* Using specific Unsplash image IDs that are more appropriate for houses/apartments/cottages */}
                 <img
-                  src={`https://images.unsplash.com/photo-1568605117036-5f0b4e2c93d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80`}
+                  src={dest.image}
                   alt={dest.name}
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                 />

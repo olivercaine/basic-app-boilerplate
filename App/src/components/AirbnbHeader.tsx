@@ -34,7 +34,7 @@ const AirbnbHeader = () => {
           {/* User Menu Placeholder */}
           <div className="relative">
             <button className="p-2 rounded-full hover:bg-gray-100 focus:outline-none">
-              <img src="https://source.unsplash.com/random/32x32?person" alt="avatar" className="w-8 h-8 rounded-full object-cover" />
+              <img src="/avatar.svg" alt="" className="w-8 h-8 rounded-full object-cover" />
             </button>
           </div>
         </div>
